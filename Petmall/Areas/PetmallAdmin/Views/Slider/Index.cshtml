@@ -1,0 +1,58 @@
+﻿@model List<Slider>
+<div class="card-body">
+
+    <div class="table-responsive pt-3">
+        <a asp-controller="slider" asp-action="create" class="mb-2 btn btn-behance">Create</a>
+        <table class="table table-dark">
+            <thead>
+                <tr>
+                    <th>
+                        Id
+                    </th>
+                    <th>
+                        Image
+                    </th>
+                    <th>
+                        Subtitle
+                    </th>
+                    <th>
+                        Title
+                    </th>
+                    <th>
+                        Settings
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+	{
+                <tr>
+                    <td>
+                        @item.Id
+                    </td>
+                    <td>
+                        <img src="~/assets/image/@item.Image" />
+                    </td>
+                    <td>
+                        @item.Subtitle
+                    </td>
+                    <td>
+                        @item.Title
+                    </td>
+                    <td class="d-flex">
+                        <div>
+                            <a asp-controller="slider" asp-action="detail" class="btn btn-outline-primary" asp-route-id="@item.Id">detail</a>
+                        </div>
+                        <div>
+                            <a asp-controller="slider" asp-action="edit" class="btn btn-outline-warning" asp-route-id="@item.Id">edit</a>
+                        </div>
+                        <div>
+                            <a asp-controller="slider" asp-action="delete" class="btn btn-outline-danger" asp-route-id="@item.Id">delete</a>
+                        </div>
+                    </td>
+                </tr>
+	}
+            </tbody>
+        </table>
+    </div>
+</div>

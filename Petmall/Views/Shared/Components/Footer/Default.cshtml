@@ -1,0 +1,23 @@
+﻿@model HomeVM
+<footer style="border-top: 1px solid rgb(183, 182, 182);">
+    <div class="container">
+        <ul class="d-flex list-unstyled justify-content-center m-5">
+            <li><a href="#">Home</a></li>
+            <li class="ms-5"><a href="#">Shop</a></li>
+            <li class="ms-5"><a href="#">Track Your Orders</a></li>
+            <li class="ms-5"><a href="#">About</a></li>
+            <li class="ms-5"><a href="#">Contact Us</a></li>
+        </ul>
+        <div class="brands m-5">
+            @foreach (var item in Model.Settings)
+            {
+                <img src="@item.Brand" alt="">
+            }
+        </div>
+        <div class="text-center" style="color:rgb(114, 111, 111) ; font-size: 14px;">
+            Copyright © 2021
+            Vinovathemes. All rights
+            reserved.
+        </div>
+    </div>
+</footer>

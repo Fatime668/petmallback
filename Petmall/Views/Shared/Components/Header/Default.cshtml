@@ -1,0 +1,70 @@
+﻿@model HomeVM
+<header>
+    <div class="container">
+        <nav>
+            <div class="row align-items-center">
+                <div class="col-6 col-sm-6 col-md-6 col-lg-3">
+                    <div class="nav-logo">
+                        @foreach (var item in Model.Settings)
+                        {
+                            <img src="@item.HeaderLogo"
+                                 alt="">
+                        }
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="nav-menu">
+                        <ul class="d-flex list-unstyled justify-content-center m-0 p-0">
+                            <li><a class="active" href="#">Home<i class="fa-solid fa-angle-down"></i></a></li>
+                            <li class="ms-5"><a href="#">Shop<i class="fa-solid fa-angle-down"></i></a></li>
+                            <li class="ms-5"><a href="#">Pages<i class="fa-solid fa-angle-down"></i></a></li>
+                            <li class="ms-5"><a href="#">Blog<i class="fa-solid fa-angle-down"></i></a></li>
+                            <li class="ms-5"><a href="#">Cats<i class="fa-solid fa-angle-down"></i></a></li>
+                            <li class="ms-5"><a href="#">Pet Library<i class="fa-solid fa-angle-down"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-6 col-sm-6 col-md-6 col-lg-3">
+                    <div class="nav-icon">
+                        <ul class="d-flex m-0 p-0 list-unstyled justify-content-end">
+                            <li><a href="#"><i class="fa-solid fa-magnifying-glass"></i></a></li>
+                            <li class="ms-3">
+                                <a href="#"><i class="fa-solid fa-bag-shopping"></i><sub>0</sub></a>
+                            </li>
+                            <li class="ms-3 setting"><a href="#"><i class="fa-solid fa-gear"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <!-- navbar start -->
+    <div class="box">
+        <div class="top">
+            <div class="logo">
+                @foreach (var item in Model.Settings)
+                {
+                    <img src="@item.HeaderLogo"
+                         alt="">
+                }
+                <a class="close" href="#"><i class="fa-solid fa-xmark"></i></a>
+            </div>
+        </div>
+        <ul class="list-unstyled m-0 p-0">
+            <li><a href="#">Log In</a></li>
+            <li><a href="#">Register</a></li>
+            <li><a href="#">Check Out</a></li>
+            <li><a href="#">My Wishlist</a></li>
+        </ul>
+        <div class="currency">
+            <ul class="d-flex list-unstyled m-0 p-0">
+                <li><a class="active" href="#">USD</a></li>
+                <li><a href="#">EUR</a></li>
+                <li><a href="#">GBP</a></li>
+            </ul>
+        </div>
+        <div class="bottom-img">
+            <img src="~/assets/image/pattern-body_b34d1edb-60c6-451d-8a0b-510652a4350d_1920x200.webp" alt="">
+        </div>
+    </div>
+</header>
